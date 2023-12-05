@@ -20,6 +20,7 @@
 #include "Codes\obj.dm"
 #include "Codes\turf.dm"
 #include "Codes\world.dm"
+#include "Codes\Keybindings\movement.dm"
 #include "Maps\map.dmm"
 // END_INCLUDE
 

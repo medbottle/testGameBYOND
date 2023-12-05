@@ -1,3 +1,6 @@
+mob/proc/CalculateHP()
+	health = src.Strength * 200
+
 mob/player/verb/pick_name()
 	src.name = input(src, "Choose name", "Name") as text
 
@@ -7,20 +10,18 @@ mob/player/verb/Say(T as text)
 mob/player/verb/OOC(T as text)
 	world << "<b>OOC</b> - [src]: [T]"
 
-mob/player/verb/Pick_Step()
-	var/new_step = text2num(input(usr,"pick stepsize","step size"))
-	usr.step_size = new_step
-	usr << "new stepsize is [new_step]"
-
 mob/player/verb/Level_Speed()
-	usr.Speed += 4
+	usr.Speed += 1
 	usr << "speed is now [Speed]"
 
 mob/player/verb/Unlevel_Speed()
 	usr.Speed --
 	usr << "speed is now [Speed]"
 
-var/stepsizecounter = 0
+mob/player/verb/Level_Strength()
+	usr.Strength += 1
+	usr << "Strength is now [Strength]"
 
-proc/StepSizeCount()
-	if(usr.Speed )
+mob/player/verb/Unlevel_Strength()
+	usr.Strength --
+	usr << "Strength is now [Strength]"
